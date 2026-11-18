@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "${PORT:-18209}:8000"
+    environment:
+      APP_DB: /data/runs.sqlite3
+    volumes:
+      - records:/data
+volumes:
+  records:

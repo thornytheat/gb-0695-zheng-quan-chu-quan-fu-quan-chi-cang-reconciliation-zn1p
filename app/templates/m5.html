@@ -1,0 +1,2 @@
+{% extends 'base.html' %}
+{% block stage_visual %}{% for r in run.stages["4"].rows[:5] %}<div class="entry"><span>{{r["证券"]}}</span><b>{{r["参考价_CNY"]}}</b></div><div class="factor-track"><i style="width:{{[100,r['复权因子']|float*50]|min}}%"></i></div>{% endfor %}<small>复权因子刻度 0–2</small>{% endblock %}
